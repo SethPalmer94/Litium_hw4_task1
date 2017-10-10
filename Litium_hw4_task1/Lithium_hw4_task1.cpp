@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <conio.h>
+//#include <conio.h>
 using namespace std;
 /*Task:You are being requested to add new features to your House Compare Prices software (homework #2). 
 The new requirement is to compare the price of three houses. For this you a required to do the following: 
@@ -27,6 +27,6 @@ public:
 int main()
 {
 	cout << "press any key to end program" << endl;
-	_getch();
+	//_getch();
 	return 0; 
 }
