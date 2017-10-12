@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-//#include <conio.h>
+#include <conio.h>
 using namespace std;
 /*Task:You are being requested to add new features to your House Compare Prices software (homework #2).
 The new requirement is to compare the price of three houses. For this you a required to do the following:
@@ -19,6 +19,22 @@ private:
 	double housePrice;
 	string streetName;
 public:
+	HouseInfo() :streetNumber(123), housePrice(3500), streetName("sesame street") {}
+	HouseInfo(int sn, int hp, string sName)
+	{
+		streetNumber = sn;
+		housePrice = hp;
+		streetName = sName;
+	}
+	void updateInfo()
+	{
+		cout << "Please enter Street number: " << endl;
+		cin >> streetNumber;
+		cout << "\nPlease enter price: " << endl;
+		cin >> housePrice;
+		cout << "\nPlease enter street name: " << endl;
+		getline(cin, streetName);
+	}
 	void ComparePrices(HouseInfo h1)
 	{
 
@@ -27,6 +43,6 @@ public:
 int main()
 {
 	cout << "press any key to end program" << endl;
-	//_getch();
+	_getch();
 	return 0;
 }
