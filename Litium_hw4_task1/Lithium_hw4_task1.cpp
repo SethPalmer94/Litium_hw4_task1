@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <conio.h>
+//#include <conio.h>
 using namespace std;
 /*Task:You are being requested to add new features to your House Compare Prices software (homework #2).
 The new requirement is to compare the price of three houses. For this you a required to do the following:
@@ -28,34 +28,34 @@ public:
 	}
 	void updateInfo()
 	{
-		cout << "Please enter Street number: " << endl;
+		cout << "Please enter Street number: " ;
 		cin >> streetNumber;
-		cout << "\nPlease enter price: " << endl;
+		cout << "Please enter price: " ;
 		cin >> housePrice;
-		cout << "\nPlease enter street name: " << endl;
+		cout << "Please enter street name: " ;
         cin.ignore();
 		getline(cin, streetName);
 	}
     void displayInfo()
     {
-		cout << " Street Name - " << streetName
+		cout << "Street Name - " << streetName
 			<< "\nStreet Number - " << streetNumber
-			<< "\nPrice: " << housePrice << endl;
+			<< "\nPrice: " << housePrice << endl << endl;
     }
 	void ComparePrices(HouseInfo h1, HouseInfo h2, HouseInfo h3)
 	{
 
-        if(h1.housePrice > h2.housePrice && h1.housePrice > h3.housePrice){
+        if(h1.housePrice < h2.housePrice && h1.housePrice < h3.housePrice){
             cout << "The first house is cheaper.";
-        }else if(h2.housePrice > h1.housePrice && h2.housePrice > h3.housePrice){
+        }else if(h2.housePrice < h1.housePrice && h2.housePrice < h3.housePrice){
             cout << "The second house is cheaper.";
-        }else if(h3.housePrice > h1.housePrice && h3.housePrice > h3.housePrice){
+        }else if(h3.housePrice < h1.housePrice && h3.housePrice < h2.housePrice){
             cout << "The third house is cheaper.";
-        }else if(h1.housePrice == h2.housePrice && h1.housePrice > h3.housePrice && h2.housePrice > h3.housePrice){
+        }else if(h1.housePrice == h2.housePrice && h1.housePrice < h3.housePrice && h2.housePrice < h3.housePrice){
             cout << "The first and the second house are cheaper.";
-        }else if(h1.housePrice == h3.housePrice && h1.housePrice > h2.housePrice && h3.housePrice > h2.housePrice){
+        }else if(h1.housePrice == h3.housePrice && h1.housePrice < h2.housePrice && h3.housePrice < h2.housePrice){
             cout << "The first and the third house are cheaper.";
-        }else if(h2.housePrice == h3.housePrice && h2.housePrice > h1.housePrice && h3.housePrice > h1.housePrice){
+        }else if(h2.housePrice == h3.housePrice && h2.housePrice < h1.housePrice && h3.housePrice < h1.housePrice){
             cout << "The second and the third house are cheaper.";
         }
 
@@ -67,7 +67,7 @@ int main()
     HouseInfo h1, h2, h3;
     char input;
 
-    cout << "The first house is currently: ";
+	cout << "The first house is currently: " << endl;
     h1.displayInfo();
 
     cout << "\n\nWould you like to update this information?(y or n) ";
@@ -84,9 +84,9 @@ int main()
 
 	if(input == 'y')
 		h1.updateInfo();
-
+	cout << "house 2: " << endl;
 	h2.updateInfo();
-
+	cout << "house 3: " << endl;
 	h3.updateInfo();
 	cout << "house 1: " << endl;
 	h1.displayInfo();
@@ -98,7 +98,7 @@ int main()
     h1.ComparePrices(h1, h2, h3);
 
 
-	_getch();
+	//_getch();
 	return 0;
 }
 // Comment needed to commit and push the files
