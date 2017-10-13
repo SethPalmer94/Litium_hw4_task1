@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-//#include <conio.h>
+#include <conio.h>
 using namespace std;
 /*Task:You are being requested to add new features to your House Compare Prices software (homework #2).
 The new requirement is to compare the price of three houses. For this you a required to do the following:
@@ -10,7 +10,7 @@ oThe street number using an integer
 oThe house price using a double
 oThe street name using a string instead of an array of characters.
 oA method to update the object?s information based on the user input.
-?A function (ComparePrices) that takes an array of objects of type class HouseInfo that displays the cheapest of the three houses.
+?A function (ComparePrices) that takes an array of objects of type class HouseInfo that displays the cheapest of the three houses./
 If two houses have the same value, you should display both houses that are equally cheap.  */
 class HouseInfo
 {
@@ -38,9 +38,9 @@ public:
 	}
     void displayInfo()
     {
-        cout << "\n Street Name - " << streetName
-                << "\nStreet Number - " << streetNumber
-                << "\nPrice: " << housePrice;
+		cout << " Street Name - " << streetName
+			<< "\nStreet Number - " << streetNumber
+			<< "\nPrice: " << housePrice << endl;
     }
 	void ComparePrices(HouseInfo h1, HouseInfo h2, HouseInfo h3)
 	{
@@ -88,11 +88,17 @@ int main()
 	h2.updateInfo();
 
 	h3.updateInfo();
+	cout << "house 1: " << endl;
+	h1.displayInfo();
+	cout << "house 2: " << endl;
+	h2.displayInfo();
+	cout << "house 3: " << endl;
+	h3.displayInfo();
 
     h1.ComparePrices(h1, h2, h3);
 
 
-//	_getch();
+	_getch();
 	return 0;
 }
 // Comment needed to commit and push the files

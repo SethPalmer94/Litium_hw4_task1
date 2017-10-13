@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lithium_hw4_task1_.cpp">
+    <ClCompile Include="Lithium_hw4_task1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
